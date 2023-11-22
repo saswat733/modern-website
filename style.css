@@ -1,0 +1,858 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilory';
+    cursor: url('icons8-cursor-24.png'), auto;	
+}
+*::selection{
+    color: white;
+    background-color: black;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 9;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#nav #navpart-1{
+   /* height: px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+   /* background-color: red; */
+   overflow: hidden;
+}
+
+#navpart-1 svg{
+    display: block;
+}
+#nav #navpart-2{
+    display: flex;
+    position: absolute;
+    top: 1.5em;
+    right: 1.2em;
+    align-items: center;
+}
+#nav #navpart-2 #links{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    width: 25vw;
+}
+#nav #navpart-2 #links a{
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+#nav #navpart-2 #icons{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    margin: 0 0 0 5em ;
+    width: 10vw;
+    background-color: #fff;
+    border-radius: 25px 25px 25px 25px;
+    padding: 1em;
+}
+#nav #navpart-2 #icons i{
+    font-size: 1.1em;
+    /* size: 1; */
+    /* scale: 2; */
+}
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(1);
+    /* z-index: 9;  */
+
+}
+
+#page1{
+    min-height:100vh;
+    position: relative;
+    width: 100%;
+    padding: 0vw 1vw;
+    padding-top: 22vh;
+    /* background-color: red; */
+    /* padding: 0 1vw; */
+}
+
+#page1 h1{
+    font-size: 14.4vw;
+    line-height: 14vw;
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif ;
+    text-align: center;
+    /* font-weight: calc(70); */
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    margin-top: 1vw;
+    position: relative;
+    /* margin-top: 0.vw; */
+}
+#video-container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video-container #play{
+    padding: 5vw 4vw;
+    background-color: black;
+    color: white;
+    font-size: 1.5vw;
+    position: fixed;
+    text-transform: uppercase;
+    border-radius: 50%;
+    opacity: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    /* background-color: yellow; */
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0vw 1vw;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: yellow; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page2 .elem .dots{
+    height: 60px;
+    width: 70%;
+    border-radius: 50px;
+    background-color: palegoldenrod;
+    position: absolute;
+    z-index: 999;
+    margin: 10px;
+
+}
+#page2 .elem .dots:hover{
+
+}
+
+#page3{
+    height: 60vh;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 3em 1em 1em 0.5em;
+}
+
+#page3 #first{
+    width: 70%;
+    padding: 0 10px;
+    /* background-color: red; */
+}
+#page3 #first h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 56px;
+    /* letter-spacing: -0.5px; */
+    line-height: 1em;
+    font-weight: bold;
+
+}
+
+#page3 #second{
+    width: 30%;
+    padding: 0 3em 0 0;
+    /* background-color: yellow; */
+}
+#page3 #second .para{
+    margin-bottom: 2.5em;
+}
+#page3 #second .para p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    /* background-color: red; */
+}
+#page3 #second a{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+#page4{
+    min-height: 120vh;
+    display: flex;
+    width: 100%;
+    position: relative;
+    background-color: #f7f7f7;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#page4 .child{
+    min-width: 55vh;
+    width: 40vw;
+    /* background-color: red; */
+}
+#page4 .child img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    cursor: pointer;
+    background-color: transparent;
+    /* scale: 1; */
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    margin:0 0 0 0;
+}
+
+#page5 #upperone{
+    text-align: center;
+    margin-top: 5em;
+}
+#page5 #upperone h2{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+#page5 #lowerbutton{
+    /* background-color:red; */
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#page5 #lowerbutton button{
+    padding: 1.2em 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f7f7f7;
+    background-color: black;
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 2em;
+    cursor: pointer;
+}
+#page5 #lowerbutton p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3.5em;
+    font-size: 1em;
+}
+#page6{
+    margin-top: 5em;
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+#page6 #leftbox{
+    /* background-color: yellow; */
+    width: 30vw;
+    height: 60vh;
+    padding: 0em 6em 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#page6 #leftbox p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page6 #rightbox {
+    display: flex;
+    width: 70vw;
+    height: 100vh;
+    justify-content: space-evenly;
+    padding: 0 0 0 2em;
+}
+#page6 #rightbox img{
+    width: 90%;
+    height: 100%;
+}
+
+#page7{
+    height: 50vh;
+    /* background-color: red; */
+    width: 100%;
+    /* padding:1.5em; */
+}
+#page7 #first-box{
+    display: flex;
+    align-items: center;
+}
+#page7 #first-box i{
+    font-size: 2.7em;
+    margin-right: 0.1em;
+}
+#page7 #first-box input{
+    font-size: 2.5em;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    width: 100vw;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.1em 0.5em;
+    color: black;
+    outline: none;
+}
+
+#page7 #second-box{
+    margin: 2em 0.2em;
+    display: flex;
+}
+#page7 #second-box #left{
+    /* background:red; */
+    display: flex;
+    width: 20vw;
+    flex-direction: column;
+}
+#page7 #second-box #left h5{
+    color: gray;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#page7 #second-box #left #links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+#page7 #second-box #left #links a{
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#page7 #second-box #center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: block; */
+    margin-top: 25em;
+
+}
+#page7 #second-box #center #down-svg{
+    /* background-color: red; */
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#page7 #second-box #center p{
+    width: 90%;
+    text-align: center;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#page7 #second-box #right{
+    /* background-color: red; */
+}
+#page7 #second-box #right h6{
+    color: gray;
+    /* font-size: 1em; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+#page7 #second-box #right a{
+    /* background-color: red; */
+    margin-right: 0.5em;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+@media (max-width:600px){
+    #page1{
+        width: 100%;
+        min-height: 70vh;
+        padding: 0 3vw;
+        padding-top: 25vh;
+        /* height: 100vh; */
+    }
+
+    #page1 h1{
+        font-size: 13.5vw;
+        line-height: 14vw;
+        letter-spacing: -2px;
+    }
+
+    #video-container{
+        height: 25vh;        
+        margin-top: -1vw;
+    }
+    #video-container #play{
+        padding: 0vw 4.2vw;
+        font-size: 3vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+    #page2{
+        height: 300vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0vw 3vw;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+    #page2 .elem{
+        height: 200vh;
+        width: 100%;
+        /* background-color: red; */
+        overflow: hidden;
+        margin-bottom: 3vw;
+
+    }
+    
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+    }
+
+    #nav{
+        /* height: 100px; */
+        width: 100%;
+        /* background-color: burlywood; */
+        position: fixed;
+        z-index: 9;
+        padding: 25px;
+        align-items: center;
+        justify-content: space-between;
+        
+    
+    }
+    
+    #nav #navpart-1{
+       /* height: px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* justify-content: space-between; */
+       /* background-color: red; */
+       overflow: hidden;
+    }
+    
+    #navpart-1 svg{
+        display: block;
+    }
+    #nav #navpart-2{
+        display: flex;
+        position: absolute;
+        top: 1.5em;
+        right: 1.2em;
+        align-items: center;
+    }
+    #nav #navpart-2 #links{
+        display: flex;
+        justify-content: space-between;
+        /* background-color: yellow; */
+        width: 25vw;
+        display: none;
+
+    }
+    #nav #navpart-2 #links a{
+        text-decoration: none;
+        color: black;
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: 100;
+        display: none;
+
+    }
+    
+    #nav #navpart-2 #icons{
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+        margin: 0 0 0 5em ;
+        width: 40vw;
+        background-color: #fff;
+        border-radius: 25px 25px 25px 25px;
+        padding: 1em;
+    }
+    #nav #navpart-2 #icons i{
+        font-size: 1.1em;
+        /* size: 1; */
+        /* scale: 2; */
+    }
+
+
+    #page3{
+        height: 50vh;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        margin:3em;
+        /* background-color: yellow; */
+    }
+    
+    #page3 #first{
+        /* width: 0%; */
+        /* background-color: red; */
+        margin-bottom: 10px;
+    }
+    #page3 #first h2{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-transform: uppercase;
+        font-size: 26px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    #page3 #second{
+        width: 80%;
+        /* padding: 0 0em 0 0; */
+        /* background-color: yellow; */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #page3 #second .para{
+        /* margin-bottom: 2.5em; */
+    }
+    #page3 #second .para p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: lighter;
+        text-align: center;
+        /* background-color: red; */
+    }
+    #page3 #second a{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
+        font-size: 1.2em;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #page4{
+        height: 50vh;
+        display: flex;
+        width: 100%;
+        position: relative;
+        background-color: #f7f7f7;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        background-color: transparent;
+    }
+    
+    #page4 .child{
+        min-width: 10vh;
+        width: 40vw;
+        /* background-color: red; */
+    }
+    #page4 .child img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        cursor: pointer;
+        background-color: transparent;
+        /* scale: 1; */
+    }
+
+
+    #page5{
+        height: 60vh;
+        width: 100%;
+        /* background-color: red; */
+        /* margin:0 0 5px 0; */
+    }
+    
+    #page5 #upperone{
+        text-align: center;
+        margin-top: 5em;
+    }
+    #page5 #upperone h2{
+        font-family: Arial, Helvetica, sans-serif ;
+        font-size: 1.2em;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    #page5 #lowerbutton{
+        /* background-color:red; */
+        margin-top: 5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    #page5 #lowerbutton button{
+        padding: 1.2em 3em;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f7f7f7;
+        /* background-color: black; */
+        border: none;
+        outline: none;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 2em;
+        cursor: pointer;
+    }
+    #page5 #lowerbutton p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 2.5em;
+        font-size: 1em;
+    }
+
+
+    #page6{
+        /* margin-top: 2em; */
+        height: 80vh;
+        width: 100%;
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: column-reverse;
+        /* margin-bottom: 0px; */
+        justify-content: center;
+       
+        margin-right: 30px;
+        
+    }
+    #page6 #leftbox{
+        /* background-color: green; */
+        width: 100vw;
+        height: 70vh;
+        /* padding: 0em 0m 0 0em; */
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        
+    }
+    
+    #page6 #leftbox p{
+        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: #fff; */
+        width: 100vw;
+        height: 80%;
+        padding-right:45px;
+        text-align: left;
+    }
+    
+    #page6 #leftbox h1{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        /* margin-left: 45px; */
+        margin-bottom: 10px;
+
+    }
+    #page6 #rightbox {
+        display: flex;
+        width: 100%;
+        height: 30vh;
+        justify-content: space-between;
+        /* padding: 0 0 0 2em; */
+        gap: 10px;
+        /* background-color: white; */
+        padding-right: 30px;
+    }
+    #page6 #rightbox img{
+        width: 40vw;
+        height: 50%;
+
+        /* margin: 0 10px; */
+        /* background-color: white; */
+        object-fit: cover;
+    }
+    
+    #page7{
+        height: 100vh;
+        /* background-color: red; */
+        width: 100%;
+        /* padding:1.5em; */
+    }
+    #page7 #first-box{
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+
+    }
+    #page7 #first-box i{
+        font-size: 1.7em;
+        margin-top: 2em;
+        background-color: whitesmoke;
+
+    }
+    #page7 #first-box input{
+        font-size: 2em;
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        width: 100%;
+        margin-top: 2em;
+        /* display: black; */
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 0em 0.5em;
+        color: black;
+        outline: none;
+    }
+    
+    #page7 #second-box{
+        margin: 2em 2em;
+        display: flex;
+        justify-content: space-between;
+    }
+    #page7 #second-box #left{
+        /* background-color:red; */
+        display: flex;
+        /* width: ; */
+        height: 40vh;
+        flex-direction: column;
+    }
+    #page7 #second-box #left h5{
+        color: gray;
+        font-weight: lighter;
+        font-size: 0.7em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #page7 #second-box #left #links{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+    
+    #page7 #second-box #left #links a{
+        text-decoration: none;
+        color: black;
+        font-weight: lighter;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #page7 #second-box #center{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: left;
+        text-align: left;
+        width: 10000px;
+        /* height: 200px; */
+        /* margin-top: 25em; */
+        /* background-color: yellow; */
+        /* display: none; */
+    
+    }
+    #page7 #second-box #center #down-svg{
+        /* background-color: red; */
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: 4em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+    }
+    #page7 #second-box #center p{
+        width: 90%;
+        text-align: center;
+        font-weight: lighter;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #page7 #second-box #right{
+        /* background-color: green; */
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    #page7 #second-box #right h6{
+        color: gray;
+        /* font-size: 1em; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+    }
+    #page7 #second-box #right a{
+        /* background-color: red; */
+        margin-right: 0.5em;
+        text-decoration: none;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+    
+    
+
+}
